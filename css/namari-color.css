@@ -171,9 +171,9 @@ body {
 }
 
 #banner h2 {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: italic;
     font-size:18px;
-    font-weight:300;
+    font-weight:800;
     color:#111;
 }
 
@@ -188,9 +188,9 @@ body {
 }
 
 .section-subtitle {
-    font-family: 'Open Sans', sans-serif, Arial, Helvetica;
+    font-family: italic;
     font-size: 16px;
-    font-weight:300;
+    font-weight:700;
     color:#9c9c9c;
 }
 
