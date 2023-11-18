@@ -1,6 +1,54 @@
 "use strict";
 
 
+const api = "https://jsonblob.com/api/jsonBlob"
+
+fetch(api, {
+    method: 'POST',
+    body: JSON.stringify({
+        name: 'dean',
+        login: 'dean',
+    }),
+    // you also have to add this request header for that API
+    headers: {
+        'Content-Type': 'application/json'
+    }
+}).then(response => {
+    if (response.ok) {
+        const blobID = response.headers.get('x-jsonblob');
+        console.log(`POST returned a blobID = ${blobID}`);
+        // return the blobID we can use to fetch the data later
+        return blobID;
+    }
+    throw new Error('POST Request failed!')
+}).then(blobID => {
+   // lets do a GET to see if we get the right data
+   console.log(`fetch ${api}/${blobID}`);
+   return fetch(`${api}/${blobID}`)
+}).then((response) => {
+    if (response.ok) {
+        return response.json();
+    }
+    throw new Error('GET Request failed! ');
+})
+.then((Jsondata) => {
+    console.log('Result of GET')
+    console.log(Jsondata)
+}).catch(error => {
+    console.log('Request failure: ', error);
+});
+
+
+
+
+
+
+
+
+
+
+
+
 $(document).ready(function () {
 	/* Video Lightbox */
 	if (!!$.prototype.simpleLightboxVideo) {
