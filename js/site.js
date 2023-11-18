@@ -1,6 +1,38 @@
 "use strict";
 
 
+
+fetch("https://jsonblob.com/api/jsonBlob", {
+    method: 'POST',
+    headers: {
+      "Content-type": "application/json"
+    },
+    body: JSON.stringify({
+        name: 'dean',
+        login: 'dean',
+    })
+})
+.then(response => {
+    if (response.ok) {
+        return response.json()
+    }
+    throw new Error('POST Request failed!')
+})
+.then(jsonResponse => {
+    console.log(jsonResponse)
+})
+.catch(error => {
+    console.log('POST Request failure: ', error);
+});
+
+
+
+
+
+
+
+
+
 const api = "https://jsonblob.com/api/jsonBlob"
 
 fetch(api, {
