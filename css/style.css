@@ -27,6 +27,45 @@
 
 
 /*------------------------------------------------------------------------------------------*/
+/* 0. Global styles */
+/*------------------------------------------------------------------------------------------*/
+
+.page-section {
+  margin-top: 120px;
+}
+
+.section-heading {
+  position: relative;
+  z-index: 2;
+}
+
+.section-heading h6 {
+  font-size: 15px;
+  font-weight: 700;
+  color: #d2b356;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-heading h4 {
+  color: #2a2a2a;
+  font-size: 35px;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+}
+
+.section-heading h4 em {
+  font-style: normal;
+  color: #d2b356;
+}
+
+.section-heading .line-dec {
+  width: 50px;
+  height: 2px;
+  background-color: #d2b356;
+}
+/*------------------------------------------------------------------------------------------*/
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
 
