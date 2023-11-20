@@ -65,6 +65,24 @@
   height: 2px;
   background-color: #d2b356;
 }
+
+.border-first-button a {
+  display: inline-block !important;
+  padding: 10px 20px !important;
+  color: #dfcf9f !important;
+  border: 1px solid #dfcf9f !important;
+  border-radius: 23px;
+  font-weight: 500 !important;
+  letter-spacing: 0.3px !important;
+  transition: all .5s;
+}
+
+.border-first-button a:hover {
+  background-color: #dfcf9f;
+  color: #fff !important;
+}
+
+
 /*------------------------------------------------------------------------------------------*/
 /* 1. Defaults & Reset of specific styles across browsers */
 /*------------------------------------------------------------------------------------------*/
